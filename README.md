@@ -21,8 +21,8 @@ Instance Manager For Among Us
 6. Click Close all Instances
 
 ## Extra Information
-
 - The `AmongUsInstanceManager.exe` can be anywhere on your computer. All you need is the environment variable to exist.
+- The program will not harm your computer at all, nor is a virus. Check source if you want to be sure.
 
 ## Suggestions/Issues
 - DM on Discord ScoSco#4890
