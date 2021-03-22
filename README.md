@@ -8,6 +8,7 @@ Instance Manager For Among Us
 - Open any number of Among Us instances
 - Close all instances with one button
 - Will use AmongUs Environment Variable, created by [Reactor Docs](https://docs.reactor.gg/), used by [Reactor](https://github.com/NuclearPowered/Reactor)
+- Now checks for AmongUs Variable onStart. If exists, load. (Error Window pops up)
 
 ## Instructions
 
