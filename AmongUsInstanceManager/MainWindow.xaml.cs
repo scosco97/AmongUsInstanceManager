@@ -25,6 +25,8 @@ namespace AmongUsInstanceManager
     {
         public MainWindow()
         {
+            Console.WriteLine(System.Windows.SystemParameters.PrimaryScreenWidth);
+            Console.WriteLine(System.Windows.SystemParameters.PrimaryScreenHeight);
             InitializeComponent();
         }
 
@@ -47,7 +49,11 @@ namespace AmongUsInstanceManager
                     instanceResult.Content = $"Starting {numInstances} instances of Among Us";
                     while (numInstances != 0)
                     {
-                        Process.Start("Among Us.exe");
+                        var au = Process.Start("Among Us.exe");
+
+                        var processAU = Process.GetProcessesByName("Among Us");
+                        Console.WriteLine(processAU);
+                        
                         Thread.Sleep(1000);
                         numInstances -= 1;
                     }
