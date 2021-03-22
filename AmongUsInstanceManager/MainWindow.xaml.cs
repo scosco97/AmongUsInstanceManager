@@ -25,9 +25,18 @@ namespace AmongUsInstanceManager
     {
         public MainWindow()
         {
-            Console.WriteLine(System.Windows.SystemParameters.PrimaryScreenWidth);
-            Console.WriteLine(System.Windows.SystemParameters.PrimaryScreenHeight);
-            InitializeComponent();
+            var AmongUsVar = Environment.GetEnvironmentVariable("AmongUs");
+            if (AmongUsVar == null)
+            {
+                System.Media.SystemSounds.Beep.Play();
+                MessageBox.Show("Error: You have not set up the Among Us Environmnent Variable correctly, or it can not be found.\n" +
+                    "Please refer to the Reactor docs to set up the variable correctly.");
+                Close();
+            }
+            else
+            {
+                InitializeComponent();
+            }
         }
 
         private void startNumInstancesButton_Click(object sender, RoutedEventArgs e)
